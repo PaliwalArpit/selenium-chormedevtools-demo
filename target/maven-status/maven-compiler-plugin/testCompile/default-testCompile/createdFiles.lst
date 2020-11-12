@@ -1,4 +1,7 @@
-me/unmesh/ElementTests.class
-me/unmesh/ChromeDevToolsTest$1.class
-me/unmesh/RelativeLocatorTest.class
-me/unmesh/ChromeDevToolsTest.class
+me/tests/ChromeDevToolsTest$1.class
+me/tests/CustomHeadersTest.class
+me/tests/RelativeLocatorTest.class
+me/tests/ChromeDevToolsTest.class
+me/tests/UrlFilteringTest.class
+me/tests/InterceptRequestTest.class
+me/tests/ElementTests.class

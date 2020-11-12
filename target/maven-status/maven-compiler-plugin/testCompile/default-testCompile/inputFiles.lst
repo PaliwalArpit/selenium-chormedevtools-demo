@@ -1,2 +1,6 @@
-/home/apaliwal/QECamp/Selenium4/selenium4/src/test/java/me/unmesh/ElementTests.java
-/home/apaliwal/QECamp/Selenium4/selenium4/src/test/java/me/unmesh/RelativeLocatorTest.java
+/home/apaliwal/QECamp/Selenium4/QECamp-selenium4-chromedevtools/src/test/java/me/tests/UrlFilteringTest.java
+/home/apaliwal/QECamp/Selenium4/QECamp-selenium4-chromedevtools/src/test/java/me/tests/InterceptRequestTest.java
+/home/apaliwal/QECamp/Selenium4/QECamp-selenium4-chromedevtools/src/test/java/me/tests/CustomHeadersTest.java
+/home/apaliwal/QECamp/Selenium4/QECamp-selenium4-chromedevtools/src/test/java/me/tests/RelativeLocatorTest.java
+/home/apaliwal/QECamp/Selenium4/QECamp-selenium4-chromedevtools/src/test/java/me/tests/ElementTests.java
+/home/apaliwal/QECamp/Selenium4/QECamp-selenium4-chromedevtools/src/test/java/me/tests/ChromeDevToolsTest.java
