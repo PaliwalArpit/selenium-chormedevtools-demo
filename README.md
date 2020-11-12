@@ -1,4 +1,4 @@
-# Selenium 4 and Chome DEv Tools Integration
+# Selenium 4 and Chome Dev Tools Integration
 This repo hosts examples for new features and changes introduced in Selenium 4
 
 One of the features added in the new version of Selenium (4.0.0-alpha-2) is a very nice Interface for Chrome DevTools API in Java.
