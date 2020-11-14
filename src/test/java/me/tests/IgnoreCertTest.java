@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 
 public class IgnoreCertTest {
 	private static ChromeDriver chromeDriver;
-    private static DevTools chromeDevTools;
-    
+	private static DevTools chromeDevTools;
+
 	@BeforeClass
 	public static void initDriverAndDevTools() {
 

@@ -10,8 +10,8 @@ import com.google.common.collect.ImmutableMap;
 
 public class CrashChromeTest {
 	private static ChromeDriver chromeDriver;
-    private static DevTools chromeDevTools;
-    
+	private static DevTools chromeDevTools;
+
 	@BeforeClass
 	public static void initDriverAndDevTools() {
 

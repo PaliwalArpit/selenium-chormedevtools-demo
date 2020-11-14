@@ -15,42 +15,42 @@ import com.google.common.collect.ImmutableList;
 
 public class UrlFilteringTest {
 
-    private static ChromeDriver chromeDriver;
-    private static DevTools chromeDevTools;
+	private static ChromeDriver chromeDriver;
+	private static DevTools chromeDevTools;
 
-    @BeforeClass
-    public static void initDriverAndDevTools() {
+	@BeforeClass
+	public static void initDriverAndDevTools() {
 
-        chromeDriver = new ChromeDriver();
+		chromeDriver = new ChromeDriver();
 
-        chromeDevTools = chromeDriver.getDevTools();
-        chromeDevTools.createSession();
+		chromeDevTools = chromeDriver.getDevTools();
+		chromeDevTools.createSession();
 
-    }
-    
-    @Test
-    public void filterUrls() {
+	}
 
-        //enable Network
-        chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+	@Test
+	public void filterUrls() {
 
-        //set blocked URL patterns
-        chromeDevTools.send(Network.setBlockedURLs(ImmutableList.of("*.css", "*.png")));
+		// enable Network
+		chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 
-        //add event listener to verify that css and png are blocked
-        chromeDevTools.addListener(Network.loadingFailed(), loadingFailed -> {
+		// set blocked URL patterns
+		chromeDevTools.send(Network.setBlockedURLs(ImmutableList.of("*.css", "*.png")));
 
-            if (loadingFailed.getResourceType().equals(ResourceType.Stylesheet)) {
-                Assert.assertEquals(loadingFailed.getBlockedReason(), BlockedReason.inspector);
-            }
+		// add event listener to verify that css and png are blocked
+		chromeDevTools.addListener(Network.loadingFailed(), loadingFailed -> {
 
-            else if (loadingFailed.getResourceType().equals(ResourceType.Image)) {
-                Assert.assertEquals(loadingFailed.getBlockedReason(), BlockedReason.inspector);
-            }
+			if (loadingFailed.getResourceType().equals(ResourceType.Stylesheet)) {
+				Assert.assertEquals(loadingFailed.getBlockedReason(), BlockedReason.inspector);
+			}
 
-        });
+			else if (loadingFailed.getResourceType().equals(ResourceType.Image)) {
+				Assert.assertEquals(loadingFailed.getBlockedReason(), BlockedReason.inspector);
+			}
 
-        chromeDriver.get("https://apache.org");
+		});
 
-    }
+		chromeDriver.get("https://apache.org");
+
+	}
 }

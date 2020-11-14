@@ -15,39 +15,36 @@ import com.google.common.collect.ImmutableList;
 
 public class InterceptRequestTest {
 	private static ChromeDriver chromeDriver;
-    private static DevTools chromeDevTools;
-    
-    @BeforeClass
-    public static void initDriverAndDevTools() {
+	private static DevTools chromeDevTools;
 
-        chromeDriver = new ChromeDriver();
+	@BeforeClass
+	public static void initDriverAndDevTools() {
 
-        chromeDevTools = chromeDriver.getDevTools();
-        chromeDevTools.createSession();
+		chromeDriver = new ChromeDriver();
 
-    }
-    
-    @Test
-    public void interceptRequestAndContinue() {
+		chromeDevTools = chromeDriver.getDevTools();
+		chromeDevTools.createSession();
 
-        //enable Network
-        chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+	}
 
-        //add listener to intercept request and continue
-        chromeDevTools.addListener(Network.requestIntercepted(),
-                requestIntercepted -> chromeDevTools.send(
-                        Network.continueInterceptedRequest(requestIntercepted.getInterceptionId(),
-                                Optional.empty(),
-                                Optional.empty(),
-                                Optional.empty(), Optional.empty(),
-                                Optional.empty(),
-                                Optional.empty(), Optional.empty())));
+	@Test
+	public void interceptRequestAndContinue() {
 
-        //set request interception only for css requests
-        RequestPattern requestPattern = new RequestPattern("*.css", ResourceType.Stylesheet, InterceptionStage.HeadersReceived);
-        chromeDevTools.send(Network.setRequestInterception(ImmutableList.of(requestPattern)));
+		// enable Network
+		chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 
-        chromeDriver.get("https://apache.org");
+		// add listener to intercept request and continue
+		chromeDevTools.addListener(Network.requestIntercepted(),
+				requestIntercepted -> chromeDevTools.send(Network.continueInterceptedRequest(
+						requestIntercepted.getInterceptionId(), Optional.empty(), Optional.empty(), Optional.empty(),
+						Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty())));
 
-    }
+		// set request interception only for css requests
+		RequestPattern requestPattern = new RequestPattern("*.css", ResourceType.Stylesheet,
+				InterceptionStage.HeadersReceived);
+		chromeDevTools.send(Network.setRequestInterception(ImmutableList.of(requestPattern)));
+
+		chromeDriver.get("https://apache.org");
+
+	}
 }

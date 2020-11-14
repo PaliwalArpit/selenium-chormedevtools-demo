@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="me.tests.NetworkEmulationTest">
+      <class name="me.tests.PerformanceMetrics">
         <methods>
-          <include name="enableNetworkOffline"/>
+          <include name="performanceMetrics"/>
           <include name="initDriverAndDevTools"/>
         </methods>
-      </class> <!-- me.tests.NetworkEmulationTest -->
+      </class> <!-- me.tests.PerformanceMetrics -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

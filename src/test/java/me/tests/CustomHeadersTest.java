@@ -13,33 +13,32 @@ import com.google.common.collect.ImmutableMap;
 
 public class CustomHeadersTest {
 	private static ChromeDriver chromeDriver;
-    private static DevTools chromeDevTools;
-    
-    @BeforeClass
-    public static void initDriverAndDevTools() {
+	private static DevTools chromeDevTools;
 
-        chromeDriver = new ChromeDriver();
+	@BeforeClass
+	public static void initDriverAndDevTools() {
 
-        chromeDevTools = chromeDriver.getDevTools();
-        chromeDevTools.createSession();
+		chromeDriver = new ChromeDriver();
 
-    }
-    
-    @Test
-    public void addCustomHeaders() {
+		chromeDevTools = chromeDriver.getDevTools();
+		chromeDevTools.createSession();
 
-        //enable Network
-        chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+	}
 
-        //set custom header
-        chromeDevTools.send(Network.setExtraHTTPHeaders(ImmutableMap.of("customHeaderName", "text/html")));
+	@Test
+	public void addCustomHeaders() {
 
-        //add event listener to verify that requests are sending with the custom header
-        chromeDevTools.addListener(Network.requestWillBeSent(), requestWillBeSent -> Assert
-                .assertEquals(requestWillBeSent.getRequest().getHeaders().get("customHeaderName"),
-                        "text/html"));
+		// enable Network
+		chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 
-        chromeDriver.get("https://apache.org");
+		// set custom header
+		chromeDevTools.send(Network.setExtraHTTPHeaders(ImmutableMap.of("customHeaderName", "text/html")));
 
-    }
+		// add event listener to verify that requests are sending with the custom header
+		chromeDevTools.addListener(Network.requestWillBeSent(), requestWillBeSent -> Assert
+				.assertEquals(requestWillBeSent.getRequest().getHeaders().get("customHeaderName"), "text/html"));
+
+		chromeDriver.get("https://apache.org");
+
+	}
 }
