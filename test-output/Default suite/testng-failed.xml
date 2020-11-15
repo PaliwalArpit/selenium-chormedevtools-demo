@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="me.tests.PerformanceMetrics">
+      <class name="me.tests.CrashChromeTest">
         <methods>
-          <include name="performanceMetrics"/>
+          <include name="genericCrashBrowser"/>
           <include name="initDriverAndDevTools"/>
         </methods>
-      </class> <!-- me.tests.PerformanceMetrics -->
+      </class> <!-- me.tests.CrashChromeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

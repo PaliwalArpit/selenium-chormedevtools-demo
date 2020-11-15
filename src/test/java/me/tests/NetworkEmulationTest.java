@@ -28,12 +28,11 @@ public class NetworkEmulationTest {
 	@Test
 	public static void enableNetworkOffline() {
 		chromeDevTools.send(Network.enable(Optional.of(100000000), Optional.empty(), Optional.empty()));
-		chromeDevTools.send(emulateNetworkConditions(true, 100, 1000, 2000, Optional.of(ConnectionType.cellular4g)));
-		chromeDevTools.addListener(Log.entryAdded(),
-				entry -> System.out.println("Error is =====================" + entry.getText()));
-		chromeDevTools.addListener(Log.entryAdded(),
-				entry -> assertEquals(entry.getText(), "net::ERR_INTERNET_DISCONNECTED"));
+		chromeDevTools.send(emulateNetworkConditions(false, 100, 200000,100000, Optional.of(ConnectionType.cellular2g)));
+	    long startTime = System.currentTimeMillis();
 		chromeDriver.get("https://flipkart.com");
+	    long endTime = System.currentTimeMillis();
+	    System.out.println("=============== Loading time is =========== "+ (endTime-startTime) +"ms");
 		chromeDriver.quit();
 	}
 }

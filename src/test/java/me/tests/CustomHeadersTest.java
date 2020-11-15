@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.network.Network;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -40,5 +41,13 @@ public class CustomHeadersTest {
 
 		chromeDriver.get("https://apache.org");
 
+	}
+
+	@AfterClass
+	public void tearDown() {
+		if (chromeDriver != null) {
+			chromeDriver.close();
+			chromeDriver.quit();
+		}
 	}
 }
