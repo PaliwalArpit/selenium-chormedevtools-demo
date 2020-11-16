@@ -2,6 +2,7 @@ package me.tests;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.Console;
 import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.Log;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -26,17 +27,24 @@ public class ConsoleLogsTest {
 
         String consoleMessage = "Hello Selenium 4";
 
+       
         //enable Console
         chromeDevTools.send(Console.enable());
 
         //add listener to verify the console message
         chromeDevTools.addListener(Console.messageAdded(), consoleMessageFromDevTools ->
                 Assert.assertEquals(true, consoleMessageFromDevTools.getText().equals(consoleMessage)));
-
+        System.out.println("message added is "+Console.messageAdded());
+        chromeDevTools.send(Log.enable());
+        chromeDevTools.addListener(Log.entryAdded(),
+                logEntry -> {
+                    System.out.println("log: "+logEntry.getText());
+                    System.out.println("level: "+logEntry.getLevel());
+                });
         chromeDriver.get("https://apache.org");
 
         //execute JS - write console message
-        chromeDriver.executeScript("console.log('=========" + consoleMessage + "=================');");
+        chromeDriver.executeScript("console.log('========= " + consoleMessage + " =================');");
 
     }
     

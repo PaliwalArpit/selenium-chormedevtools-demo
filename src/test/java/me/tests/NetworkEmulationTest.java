@@ -1,13 +1,11 @@
 package me.tests;
 
-import static org.junit.Assert.assertEquals;
 import static org.openqa.selenium.devtools.network.Network.emulateNetworkConditions;
 
 import java.util.Optional;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.Log;
 import org.openqa.selenium.devtools.network.Network;
 import org.openqa.selenium.devtools.network.model.ConnectionType;
 import org.testng.annotations.BeforeClass;

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="me.tests.CrashChromeTest" hash-for-method="genericCrashBrowser">genericCrashBrowser</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,37 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="me.tests.CustomHeadersTest" hash-for-method="addCustomHeaders">addCustomHeaders</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="me.tests.NetworkEmulationTest" hash-for-method="enableNetworkOffline">enableNetworkOffline</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="me.tests.UrlFilteringTest" hash-for-method="filterUrls">filterUrls</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="me.tests.InterceptRequestTest" hash-for-method="interceptRequestAndContinue">interceptRequestAndContinue</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="me.tests.IgnoreCertTest" hash-for-method="loadInsecureWebsite">loadInsecureWebsite</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="me.tests.PerformanceMetrics" hash-for-method="performanceMetrics">performanceMetrics</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="me.tests.ConsoleLogsTest" hash-for-method="verifyConsoleMessageAdded">verifyConsoleMessageAdded</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="me.tests.SimulateDevice" hash-for-method="performanceMetrics">performanceMetrics</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -161,82 +117,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">me.tests.CrashChromeTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="genericCrashBrowser">
-                  </a> <!-- genericCrashBrowser -->
-                  <span class="method-name">genericCrashBrowser</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: &apos;4.0.0-alpha-3&apos;, revision: &apos;8c567de6dc&apos;
-System info: host: &apos;192.168.100.9&apos;, ip: &apos;192.168.100.9&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.8.16-200.fc32.x86_64&apos;, java.version: &apos;1.8.0_265&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.devtools.Connection.sendAndWait(Connection.java:106)
-	at org.openqa.selenium.devtools.DevTools.send(DevTools.java:55)
-	at me.tests.CrashChromeTest.genericCrashBrowser(CrashChromeTest.java:27)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.testng.TestRunner.privateRun(TestRunner.java:766)
-	at org.testng.TestRunner.run(TestRunner.java:587)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-	at org.testng.TestNG.runSuites(TestNG.java:1039)
-	at org.testng.TestNG.run(TestNG.java:1007)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.util.concurrent.TimeoutException
-	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1784)
-	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1928)
-	at org.openqa.selenium.devtools.Connection.sendAndWait(Connection.java:95)
-	... 30 more
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">me.tests.NetworkEmulationTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="enableNetworkOffline">
-                  </a> <!-- enableNetworkOffline -->
-                  <span class="method-name">enableNetworkOffline</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">me.tests.PerformanceMetrics</span>
+              <span class="class-name">me.tests.SimulateDevice</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -248,85 +132,10 @@ Caused by: java.util.concurrent.TimeoutException
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">me.tests.UrlFilteringTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="filterUrls">
-                  </a> <!-- filterUrls -->
-                  <span class="method-name">filterUrls</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">me.tests.CustomHeadersTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addCustomHeaders">
-                  </a> <!-- addCustomHeaders -->
-                  <span class="method-name">addCustomHeaders</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">me.tests.IgnoreCertTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loadInsecureWebsite">
-                  </a> <!-- loadInsecureWebsite -->
-                  <span class="method-name">loadInsecureWebsite</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">me.tests.InterceptRequestTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="interceptRequestAndContinue">
-                  </a> <!-- interceptRequestAndContinue -->
-                  <span class="method-name">interceptRequestAndContinue</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-          <div class="suite-Default_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">me.tests.ConsoleLogsTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyConsoleMessageAdded">
-                  </a> <!-- verifyConsoleMessageAdded -->
-                  <span class="method-name">verifyConsoleMessageAdded</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse--1958195306/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse--17545016/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -335,14 +144,7 @@ Caused by: java.util.concurrent.TimeoutException
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;me.tests.InterceptRequestTest&quot;/&gt;
-      &lt;class name=&quot;me.tests.ConsoleLogsTest&quot;/&gt;
-      &lt;class name=&quot;me.tests.UrlFilteringTest&quot;/&gt;
-      &lt;class name=&quot;me.tests.IgnoreCertTest&quot;/&gt;
-      &lt;class name=&quot;me.tests.CustomHeadersTest&quot;/&gt;
-      &lt;class name=&quot;me.tests.NetworkEmulationTest&quot;/&gt;
-      &lt;class name=&quot;me.tests.CrashChromeTest&quot;/&gt;
-      &lt;class name=&quot;me.tests.PerformanceMetrics&quot;/&gt;
+      &lt;class name=&quot;me.tests.SimulateDevice&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -356,7 +158,7 @@ Caused by: java.util.concurrent.TimeoutException
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (8 classes)</span>
+                <span class="test-name">Default test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -382,44 +184,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'enableNetworkOffline')
-data.setCell(0, 2, 'me.tests.NetworkEmulationTest')
-data.setCell(0, 3, 28146);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'performanceMetrics')
-data.setCell(1, 2, 'me.tests.PerformanceMetrics')
-data.setCell(1, 3, 28061);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyConsoleMessageAdded')
-data.setCell(2, 2, 'me.tests.ConsoleLogsTest')
-data.setCell(2, 3, 25055);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'interceptRequestAndContinue')
-data.setCell(3, 2, 'me.tests.InterceptRequestTest')
-data.setCell(3, 3, 22466);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'addCustomHeaders')
-data.setCell(4, 2, 'me.tests.CustomHeadersTest')
-data.setCell(4, 3, 13408);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'loadInsecureWebsite')
-data.setCell(5, 2, 'me.tests.IgnoreCertTest')
-data.setCell(5, 3, 12240);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'filterUrls')
-data.setCell(6, 2, 'me.tests.UrlFilteringTest')
-data.setCell(6, 3, 10399);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'genericCrashBrowser')
-data.setCell(7, 2, 'me.tests.CrashChromeTest')
-data.setCell(7, 3, 10003);
+data.setCell(0, 1, 'performanceMetrics')
+data.setCell(0, 2, 'me.tests.SimulateDevice')
+data.setCell(0, 3, 11676);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -445,101 +219,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">me.tests.InterceptRequestTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">me.tests.SimulateDevice</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">initDriverAndDevTools</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">interceptRequestAndContinue</span>
-                <span class="method-start">1213 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">me.tests.ConsoleLogsTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initDriverAndDevTools</span>
-                <span class="method-start">23696 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">verifyConsoleMessageAdded</span>
-                <span class="method-start">24362 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">49420 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">me.tests.UrlFilteringTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initDriverAndDevTools</span>
-                <span class="method-start">49502 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">filterUrls</span>
-                <span class="method-start">49990 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">me.tests.IgnoreCertTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initDriverAndDevTools</span>
-                <span class="method-start">60392 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">loadInsecureWebsite</span>
-                <span class="method-start">61129 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">me.tests.CustomHeadersTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initDriverAndDevTools</span>
-                <span class="method-start">73372 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">addCustomHeaders</span>
-                <span class="method-start">73992 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">87402 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">me.tests.NetworkEmulationTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initDriverAndDevTools</span>
-                <span class="method-start">87477 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">enableNetworkOffline</span>
-                <span class="method-start">88104 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">me.tests.CrashChromeTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initDriverAndDevTools</span>
-                <span class="method-start">116255 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">genericCrashBrowser</span>
-                <span class="method-start">116806 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">me.tests.PerformanceMetrics</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initDriverAndDevTools</span>
-                <span class="method-start">126812 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
                 <span class="method-name">performanceMetrics</span>
-                <span class="method-start">127291 ms</span>
+                <span class="method-start">1032 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
